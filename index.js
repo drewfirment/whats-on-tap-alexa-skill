@@ -24,7 +24,7 @@
 var AlexaSkill = require('./AlexaSkill'),
     taps = require('./taps');
 
-var APP_ID = undefined; 'amzn1.echo-sdk-ams.app.9c69a48a-351a-4b35-9065-1802849bae19';
+var APP_ID = 'amzn1.echo-sdk-ams.app.9c69a48a-351a-4b35-9065-1802849bae19';
 
 /**
  * TapList is a child of AlexaSkill.
