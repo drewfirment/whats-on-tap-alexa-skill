@@ -32,15 +32,15 @@ var APP_ID = 'amzn1.echo-sdk-ams.app.9c69a48a-351a-4b35-9065-1802849bae19';
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
  */
-var Taplist = function () {
+var TapList = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
 // Extend AlexaSkill
-Taplist.prototype = Object.create(AlexaSkill.prototype);
-Taplist.prototype.constructor = Taplist;
+TapList.prototype = Object.create(AlexaSkill.prototype);
+TapList.prototype.constructor = TapList;
 
-Taplist.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
+TapList.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
     var speechText = "Welcome to Whats On Tap. You can ask a question like, what's on tap at Hardywood? ... Now, what can I help you with.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
@@ -48,7 +48,7 @@ Taplist.prototype.eventHandlers.onLaunch = function (launchRequest, session, res
     response.ask(speechText, repromptText);
 };
 
-Taplist.prototype.intentHandlers = {
+TapList.prototype.intentHandlers = {
     "TapListIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
@@ -111,6 +111,6 @@ Taplist.prototype.intentHandlers = {
 };
 
 exports.handler = function (event, context) {
-    var taplist = new Taplist();
-    taplist.execute(event, context);
+    var tapList = new TapList();
+    tapList.execute(event, context);
 };
