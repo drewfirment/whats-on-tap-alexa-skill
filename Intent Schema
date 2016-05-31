@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "TapListIntent",
+      "slots": [
+      {
+        "name" : "Brewer",
+        "type": "LIST_OF_BREWERIES"
+      }
+     ]
+    },
+   {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
