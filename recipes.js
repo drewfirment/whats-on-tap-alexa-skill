@@ -19,4 +19,4 @@ module.exports = {
 "legend": "currently on tap at legend, virginia apple, twenty first anniversary imperial brown ale, brown ale, golden i.p.a., gorilla train coffee stout, hopfest, lager, pale ale, pilsner, porter, tripel, z dam ale.",
 "lickinghole creek": "currently on tap at lickinghole creek, r.b.u. collaboration number two, nuclear nugget, pineapple nuclear nugget, grapefruit nuclear nugget, coconut quad, heir apparent.",
 "midnight": "currently on tap at midnight, big guy, head first, little guy, midnight granite, new beginning, not my job, purdy mechanic, rockville red, r.v.a. fiesta.".
-\};
+};
