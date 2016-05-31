@@ -22,12 +22,12 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    taplist = require('./taplists');
+    taps = require('./taps');
 
 var APP_ID = undefined; 'amzn1.echo-sdk-ams.app.9c69a48a-351a-4b35-9065-1802849bae19';
 
 /**
- * Taplist is a child of AlexaSkill.
+ * TapList is a child of AlexaSkill.
  * To read more about inheritance in JavaScript, see the link below.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
@@ -57,15 +57,15 @@ Taplist.prototype.intentHandlers = {
         }
 
         var cardTitle = "Tap List for " + itemName,
-            taplist = taplists[itemName],
+            tap = taps[itemName],
             speechOutput,
             repromptOutput;
-        if (taplist) {
+        if (tap) {
             speechOutput = {
-                speech: taplist,
+                speech: tap,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tellWithCard(speechOutput, cardTitle, taplist);
+            response.tellWithCard(speechOutput, cardTitle, tap);
         } else {
             var speech;
             if (itemName) {
