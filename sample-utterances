@@ -1,16 +1,16 @@
-what is on tap at
-what’s on tap at
-tell me what's on tap at
-tell me what is on tap at
-give what's on tap at
-give what is on tap at
-give me what's on tap at
-give me what is on tap at
-get what's on tap at
-get what is on tap at
-get me what's on tap at
-get me what is on tap at
-find what's on tap at
-find what is on tap at
-find me what's on tap at
-find me what is on tap at
+TapListIntent what is on tap at {Brewer}
+TapListIntent whats on tap at {Brewer}
+TapListIntent tell me whats on tap at {Brewer}
+TapListIntent tell me what is on tap at {Brewer}
+TapListIntent give whats on tap at {Brewer}
+TapListIntent give what is on tap at {Brewer}
+TapListIntent give me whats on tap at {Brewer}
+TapListIntent give me what is on tap at {Brewer}
+TapListIntent get whats on tap at {Brewer}
+TapListIntent get what is on tap at {Brewer}
+TapListIntent get me whats on tap at {Brewer}
+TapListIntent get me what is on tap at {Brewer}
+TapListIntent find whats on tap at {Brewer}
+TapListIntent find what is on tap at {Brewer}
+TapListIntent find me whats on tap at {Brewer}
+TapListIntent find me what is on tap at {Brewer}
