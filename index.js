@@ -22,7 +22,7 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    taplists = require('./taplists');
+    taplist = require('./taplists');
 
 var APP_ID = undefined; 'amzn1.echo-sdk-ams.app.9c69a48a-351a-4b35-9065-1802849bae19';
 
