@@ -111,6 +111,6 @@ Taplist.prototype.intentHandlers = {
 };
 
 exports.handler = function (event, context) {
-    var tapList = new TapList();
-    tapList.execute(event, context);
+    var taplist = new Taplist();
+    taplist.execute(event, context);
 };
