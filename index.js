@@ -49,7 +49,7 @@ MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, sess
 };
 
 MinecraftHelper.prototype.intentHandlers = {
-    "RecipeIntent": function (intent, session, response) {
+    "TapListIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
         if (itemSlot && itemSlot.value){
