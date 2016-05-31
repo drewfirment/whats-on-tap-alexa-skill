@@ -15,63 +15,63 @@
  *
  * Examples:
  * One-shot model:
- *  User: "Alexa, ask What's On Tap whats on tap at a local brewery"
- *  Alexa: "(reads back tap list for local brewery)"
+ *  User: "Alexa, ask Minecraft Helper how to make paper."
+ *  Alexa: "(reads back recipe for paper)"
  */
 
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    taps = require('./taps');
+    recipes = require('./recipes');
 
-var APP_ID = 'amzn1.echo-sdk-ams.app.9c69a48a-351a-4b35-9065-1802849bae19';
+var APP_ID = 'amzn1.echo-sdk-ams.app.67f14a05-d628-4e8e-9788-51b7e5e7a12b';
 
 /**
- * TapList is a child of AlexaSkill.
+ * MinecraftHelper is a child of AlexaSkill.
  * To read more about inheritance in JavaScript, see the link below.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
  */
-var TapList = function () {
+var MinecraftHelper = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
 // Extend AlexaSkill
-TapList.prototype = Object.create(AlexaSkill.prototype);
-TapList.prototype.constructor = TapList;
+MinecraftHelper.prototype = Object.create(AlexaSkill.prototype);
+MinecraftHelper.prototype.constructor = MinecraftHelper;
 
-TapList.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    var speechText = "Welcome to Whats On Tap. You can ask a question like, what's on tap at Hardywood? ... Now, what can I help you with.";
+MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
+    var speechText = "Welcome to the Minecraft Helper. You can ask a question like, what's the recipe for a chest? ... Now, what can I help you with.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "For instructions on what you can say, please say help me.";
     response.ask(speechText, repromptText);
 };
 
-TapList.prototype.intentHandlers = {
-    "TapListIntent": function (intent, session, response) {
+MinecraftHelper.prototype.intentHandlers = {
+    "RecipeIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
         if (itemSlot && itemSlot.value){
             itemName = itemSlot.value.toLowerCase();
         }
 
-        var cardTitle = "Tap List for " + itemName,
-            tap = taps[itemName],
+        var cardTitle = "Recipe for " + itemName,
+            recipe = recipes[itemName],
             speechOutput,
             repromptOutput;
-        if (tap) {
+        if (recipe) {
             speechOutput = {
-                speech: tap,
+                speech: recipe,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tellWithCard(speechOutput, cardTitle, tap);
+            response.tellWithCard(speechOutput, cardTitle, recipe);
         } else {
             var speech;
             if (itemName) {
-                speech = "I'm sorry, I currently do not know the whats on tap for " + itemName + ". What else can I help with?";
+                speech = "I'm sorry, I currently do not know the recipe for " + itemName + ". What else can I help with?";
             } else {
-                speech = "I'm sorry, I currently do not know that brewery. What else can I help with?";
+                speech = "I'm sorry, I currently do not know that recipe. What else can I help with?";
             }
             speechOutput = {
                 speech: speech,
@@ -96,8 +96,8 @@ TapList.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask whats on tap at a local brewery such as, whats on tap at Midnight, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's on tap at Strangeways or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions about minecraft such as, what's the recipe for a chest, or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, what's the recipe for a chest, or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT
@@ -111,6 +111,6 @@ TapList.prototype.intentHandlers = {
 };
 
 exports.handler = function (event, context) {
-    var tapList = new TapList();
-    tapList.execute(event, context);
+    var minecraftHelper = new MinecraftHelper();
+    minecraftHelper.execute(event, context);
 };
