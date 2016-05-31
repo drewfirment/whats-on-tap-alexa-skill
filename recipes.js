@@ -9,7 +9,7 @@
 */
 
 module.exports = {
-"hardywood": "currently on tap at hardywood, berliner weisse, bourbon cru, little flowers, peach tripel, pils, singel, grobe teufel, and grobe teufel with pears",
+"hardywood": "currently on tap at hardywood, berliner weisse, bourbon cru, little flowers, peach tripel, pils, singel, grobe teufel, and grobe teufel with pears.",
 "strangeways": "currently on tap at strangeways, a bomb sour, albino monkey, ape armageddon kentucky bourbon imperial stout, ape armageddon kentucky rye whiskey imperial stout, ape armageddon mexican tequila imperial stout, bartlett and bosc pear o.t.i.s. cucumber melon sour, beer engine series, beyond the ouija, boom choc o lotta, compendium of curiosities series, freeze ray, guarded by monkeys, g.w.a.r. blood, havoc black i.p.a., havoc gold, just say go, legalize it equal rights i.p.a., martian spring, mystic man legalize it i.p.a. series, nitro series, o.t.i.s. cucumber melon sour, olivia, phantasmic, portia, tart cherry o.t.i.s. cucumber melon sour, the hinterlander, totally tubular kiwi lime radler, totally tubular tangerine radler, totally tubular tangerine radler, virginia stingo, woodbooger.",
 "garden grove": "currently on tap at garden grove, bittersweet marriage, cajones del sol, criminal mischief, garden grove pale ale, ginger beer, little devil, saint rostov, the farmhouse, the phoenix, wild child, juliette.",
 "veil": "currently on tap at veil, cheryl from accounting, crucial taunt, lord shredder.",
