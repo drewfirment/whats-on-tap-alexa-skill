@@ -1,16 +1,21 @@
-TapListIntent what is on tap at {Brewer}
-TapListIntent whats on tap at {Brewer}
-TapListIntent tell me whats on tap at {Brewer}
-TapListIntent tell me what is on tap at {Brewer}
-TapListIntent give whats on tap at {Brewer}
-TapListIntent give what is on tap at {Brewer}
-TapListIntent give me whats on tap at {Brewer}
-TapListIntent give me what is on tap at {Brewer}
-TapListIntent get whats on tap at {Brewer}
-TapListIntent get what is on tap at {Brewer}
-TapListIntent get me whats on tap at {Brewer}
-TapListIntent get me what is on tap at {Brewer}
-TapListIntent find whats on tap at {Brewer}
-TapListIntent find what is on tap at {Brewer}
-TapListIntent find me whats on tap at {Brewer}
-TapListIntent find me what is on tap at {Brewer}
+RecipeIntent at {Item}
+RecipeIntent on tap {Item}
+RecipeIntent on tap at {Item}
+RecipeIntent what is on tap at {Item}
+RecipeIntent what's on tap at {Item}
+RecipeIntent what is the tap list at {Item}
+RecipeIntent what's the tap list at {Item}
+RecipeIntent tell me what's on tap at {Item}
+RecipeIntent tell me what is on tap at {Item}
+RecipeIntent give what's on tap at {Item}
+RecipeIntent give what is on tap at {Item}
+RecipeIntent give me what's on tap at {Item}
+RecipeIntent give me what is on tap at {Item}
+RecipeIntent get what's on tap at {Item}
+RecipeIntent get what is on tap at {Item}
+RecipeIntent get me what's on tap at {Item}
+RecipeIntent get me what is on tap at {Item}
+RecipeIntent find what's on tap at {Item}
+RecipeIntent find what is on tap at {Item}
+RecipeIntent find me what's on tap at {Item}
+RecipeIntent find me what is on tap at {Item}
