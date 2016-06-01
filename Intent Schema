@@ -1,11 +1,11 @@
 {
   "intents": [
     {
-      "intent": "TapListIntent",
+      "intent": "RecipeIntent",
       "slots": [
       {
-        "name" : "Brewer",
-        "type": "LIST_OF_BREWERIES"
+        "name" : "Item",
+        "type": "LIST_OF_ITEMS"
       }
      ]
     },
