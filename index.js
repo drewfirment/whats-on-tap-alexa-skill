@@ -41,7 +41,7 @@ MinecraftHelper.prototype = Object.create(AlexaSkill.prototype);
 MinecraftHelper.prototype.constructor = MinecraftHelper;
 
 MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    var speechText = "Welcome to the Minecraft Helper. You can ask a question like, what's the recipe for a chest? ... Now, what can I help you with.";
+    var speechText = "Welcome to the What's On Tap. You can ask a question like, what's on tap at Hardywood ... Now, what can I help you with.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "For instructions on what you can say, please say help me.";
@@ -49,14 +49,14 @@ MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, sess
 };
 
 MinecraftHelper.prototype.intentHandlers = {
-    "TapListIntent": function (intent, session, response) {
+    "RecipeIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
         if (itemSlot && itemSlot.value){
             itemName = itemSlot.value.toLowerCase();
         }
 
-        var cardTitle = "Recipe for " + itemName,
+        var cardTitle = "Tap list for " + itemName,
             recipe = recipes[itemName],
             speechOutput,
             repromptOutput;
@@ -69,9 +69,9 @@ MinecraftHelper.prototype.intentHandlers = {
         } else {
             var speech;
             if (itemName) {
-                speech = "I'm sorry, I currently do not know the recipe for " + itemName + ". What else can I help with?";
+                speech = "I'm sorry, I currently do not know what's on tap for " + itemName + ". What else can I help with?";
             } else {
-                speech = "I'm sorry, I currently do not know that recipe. What else can I help with?";
+                speech = "I'm sorry, I currently do not have that tap list. What else can I help with?";
             }
             speechOutput = {
                 speech: speech,
@@ -96,8 +96,8 @@ MinecraftHelper.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask questions about minecraft such as, what's the recipe for a chest, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's the recipe for a chest, or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions about minecraft such as, what's on tap at Hardywood, or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, what's on tap at Hardywood, or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT
